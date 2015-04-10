@@ -12,7 +12,7 @@ Vagrant.configure(2) do |config|
 
   # Every Vagrant development environment requires a box. You can search for
   # boxes at https://atlas.hashicorp.com/search.
-  config.vm.box = "deb/wheezy-amd64"
+  config.vm.box = "hashicorp/precise64"
   config.vm.provision :shell, path: "bootstrap.sh"
 
   # Disable automatic box update checking. If you disable this, then
@@ -45,7 +45,7 @@ Vagrant.configure(2) do |config|
   # Example for VirtualBox:
   #
   config.vm.provider "virtualbox" do |vb|
-      vb.name = "UnifiedView1.5.5-wheezy"
+      vb.name = "RDFDataCubesVagrantUbuntuPrecise"
       vb.gui = true
       vb.customize ["modifyvm", :id, "--memory", 4096]
       vb.customize ["modifyvm", :id, "--vram", 64]

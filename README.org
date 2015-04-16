@@ -1,1 +1,17 @@
 #+TITLE: VagrantRDFCubes
+
+* Introduction 
+This Vagrant description is for a virtualbox wihich runs ubuntu precise64.
+It has installed:
+- Iceweasal (web-browser)
+- LodStatworkbench (accessible at http://localhost:8080/lod2statworkbench).
+
+* Setup
+#+BEGIN_SRC bash
+vagrant up
+# Which will make sure the interface is accessible
+vagrant halt
+hagrant up
+#+END_SRC
+
+

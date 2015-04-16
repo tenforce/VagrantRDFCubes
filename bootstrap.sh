@@ -35,8 +35,10 @@ echo "virtuoso-opensource-7.1 virtuoso-opensource-7.1/dba-password password root
 # installation of the LOD2 tools, etc. which have customised 
 # values.
 apt-get install -y --force-yes lod2statworkbench
+
 # Change the default homepage
-sed -i 's|\("browser.startup.homepage",\) "\(.*\)"|\1 "http://localhost:8080/lod2statworkbench"|' .mozilla/firefox/*.default/prefs.js
+echo "pref(\"browser.startup.homepage\", \"http://localhost:8080/lod2statworkbench\");" >> /etc/firefox/syspref.js
+echo "pref(\"browser.startup.homepage\", \"http://localhost:8080/lod2statworkbench\");" >> /etc/firefox/browser/defaults/preferences/syspref.js
 
 ##############################################################
 # Allows login without password (locally)

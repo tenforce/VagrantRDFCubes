@@ -4,6 +4,13 @@
 # the RDF Data Cube Examples and the lodstatworkbench (eventually)
 #
 
+##############################################################
+apt-get update -y
+apt-get install --no-install-recommends -y ubuntu-desktop
+apt-get install -y git bash make curl sed
+apt-get install -y iceweasel openjdk-7-jre openjdk-7-jdk
+apt-get install -y dkms virtualbox-guest-dkms virtualbox-guest-x11
+
 #################################################################
 # Setup the extra source lists (lod2 stack and prolog)
 #
@@ -11,18 +18,11 @@ apt-get install -y python-software-properties software-properties-common
 apt-add-repository -y ppa:swi-prolog/stable > log
 echo "deb http://stack.linkeddata.org/deb/ ldstack main" >> /etc/apt/sources.list
 # extra 4E34CBDD64B8E176
-apt-get update -y --force-yes 
 
-apt-get install -y dkms virtualbox-guest-dkms virtualbox-guest-x11
-apt-get install --no-install-recommends -y ubuntu-desktop
-apt-get install -y iceweasel
-
-# Now start to setup basics, etc.
-apt-get install -y openjdk-7-jre openjdk-7-jdk
-apt-get install -y git bash make curl sed
+apt-get update -y --force-yes
 
 # Install the latest version of swi-prolog (not the one from precise)
-apt-get install -y swi-prolog dos2unix
+apt-get install -y --force-yes swi-prolog dos2unix
 
 ###############################################################
 # Set the default values for the debconf questions
@@ -37,8 +37,8 @@ echo "virtuoso-opensource-7.1 virtuoso-opensource-7.1/dba-password password root
 apt-get install -y --force-yes lod2statworkbench
 
 # Change the default homepage
-echo "pref(\"browser.startup.homepage\", \"http://localhost:8080/lod2statworkbench\");" >> /etc/firefox/syspref.js
-echo "pref(\"browser.startup.homepage\", \"http://localhost:8080/lod2statworkbench\");" >> /etc/firefox/browser/defaults/preferences/syspref.js
+echo "user_pref(\"browser.startup.homepage\", \"http://localhost:8080/lod2statworkbench\");" >> /etc/firefox/syspref.js
+echo "_user_pref(\"browser.startup.homepage\", \"http://localhost:8080/lod2statworkbench\");" >> /etc/firefox/browser/defaults/preferences/syspref.js
 
 ##############################################################
 # Allows login without password (locally)
@@ -55,6 +55,7 @@ service virtuoso-opensource-7.1 restart
 ( cd /vagrant_opendata ; make -k all )
 
 # Cleanup anything left around (switch off release upgrader)
+apt-get install -y gnome-terminal
 apt-get remove ubuntu-release-upgrader-core
 apt-get autoclean
 echo "****** done with bootstrap of RDF DataCube test machine"

@@ -44,6 +44,9 @@ echo "_user_pref(\"browser.startup.homepage\", \"http://localhost:8080/lod2statw
 # Allows login without password (locally)
 echo "vagrant ALL=(ALL) NOPASSWD:ALL" > /etc/sudoers.d/vagrant
 chmod 440 /etc/sudoers.d/vagrant
+#adduser vagrant adm
+#adduser vagrant admin
+#adduser vagrant sudo
 echo "****** done with main bootstrap creation"
 
 ##############################################################

@@ -6,7 +6,7 @@
 
 ##############################################################
 apt-get update -y
-apt-get install --no-install-recommends -y ubuntu-desktop
+apt-get install -y ubuntu-desktop
 apt-get install -y git bash make curl sed
 apt-get install -y iceweasel openjdk-7-jre openjdk-7-jdk
 apt-get install -y dkms virtualbox-guest-dkms virtualbox-guest-x11

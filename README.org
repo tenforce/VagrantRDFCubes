@@ -12,6 +12,8 @@ It has installed:
   3. startup vagrant
   4. login to the system
        user:vagrant/vagrant
+       
+       note credentials Virtuoso are dba/root
 
 ** Vagrant installation
   See https://www.vagrantup.com/

@@ -10,9 +10,12 @@ It has installed:
   1. Vagrant installed
   2. check out the git repository
   3. startup vagrant
+  4. login to the system
+       user:vagrant/vagrant
 
 ** Vagrant installation
   See https://www.vagrantup.com/
+  Also install VirtualBox
    
 *** Windows users
   Make 

@@ -6,12 +6,41 @@ It has installed:
 - Iceweasal (web-browser)
 - LodStatworkbench (accessible at http://localhost:8080/lod2statworkbench).
 
-* Setup
+* Deployment steps
+  1. Vagrant installed
+  2. check out the git repository
+  3. startup vagrant
+
+** Vagrant installation
+  See https://www.vagrantup.com/
+   
+*** Windows users
+  Make 
+*** Mac OS users
+
+** GitHub support
+  *** Windows users
+  Install git-bash ()
+  
 #+BEGIN_SRC bash
+  git clone <URI>
+#+END_SRC
+  
+
+** Startup Vagrant
+#+BEGIN_SRC bash
+    # 
 vagrant up
-# Which will make sure the interface is accessible
+    # Which will make sure the interface is accessible
+    # It will download the ISO image, and 
+    # then will download all necessary packages
+    # 
+    # Estimated activation time depends on network download speed, but on a
+    # high speed connection is approximately 15 minutes.
+   
+   # restart the system 
 vagrant halt
-hagrant up
+vagrant up
 #+END_SRC
 
 

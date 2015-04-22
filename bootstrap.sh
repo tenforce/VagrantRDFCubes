@@ -52,7 +52,10 @@ echo "****** done with main bootstrap creation"
 ##############################################################
 # Now rebuild the datafiles and add the cubes to the virtuoso
 # system.
- 
+
+dos2unix /vagrant_opendata/load_rdfcubes.sh # fix dos updated files 
+chmod +x /vagrant_opendata/load_rdfcubes.sh
+dos2unix /vagrant_opendata/Makefile
 cp /vagrant/virtuoso.ini /etc/virtuoso-opensource-7.1/
 service virtuoso-opensource-7.1 restart
 ( cd /vagrant_opendata ; make -k all )

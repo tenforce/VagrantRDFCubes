@@ -61,7 +61,6 @@ service virtuoso-opensource-7.1 restart
 ( cd /vagrant_opendata ; make -k all )
 
 # Cleanup anything left around (switch off release upgrader)
-apt-get install -y gnome-terminal
-apt-get remove ubuntu-release-upgrader-core
+sed -i 's/Prompt=.*/Prompt=never/' /etc/update-manager/release-upgrades
 apt-get autoclean
 echo "****** done with bootstrap of RDF DataCube test machine"

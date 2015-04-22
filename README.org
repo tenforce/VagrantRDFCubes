@@ -35,6 +35,9 @@ It has installed:
 ** Startup Vagrant
 #+BEGIN_SRC bash
     # 
+vagrant plugin install vagrant-vbguest
+    # Which will install the virtualbox guest additions
+    # allowing full screen for this virtualbox.
 vagrant up
     # Which will make sure the interface is accessible
     # It will download the ISO image, and 

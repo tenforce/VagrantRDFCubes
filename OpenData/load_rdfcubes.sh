@@ -3,8 +3,6 @@
 # Load all the created rdf data cubes files into virtuoso
 #
 
-set -x
-
 CURL=curl
 DBUSER=dba
 DBPASSWD=root

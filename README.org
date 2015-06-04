@@ -1,12 +1,22 @@
 #+TITLE: VagrantRDFCubes
 
 * Introduction 
-This Vagrant description is for a virtualbox wihich runs ubuntu precise64.
-It has installed:
-- Iceweasal (web-browser)
-- LodStatworkbench (accessible at http://localhost:8080/lod2statworkbench).
+This repository provides all the necessary setup instructions to deploy a virtual machine setting up a conversion pipeline for statistical data. 
+This work has been conducted by the Open Data Support project. See [[https://joinup.ec.europa.eu/community/ods/description][Open Data Support]]. 
+
+
+This Vagrant description is for a virtualbox which runs ubuntu precise64.
+It provides the 
+- LodStatworkbench (accessible at http://localhost:8080/lod2statworkbench): see for more documentation http://wiki.lod2.eu/display/LOD2DOC/LOD2+Statistical+Workbench and the http://stack.linkeddata.org
+- conversion tool-chain which converts the statistical data provided by the Cypriotic Statistical Office and the Bulgarian Statistical Office.
 
 * Deployment steps
+The deployment is also documented in the slides provided in the documentation.
+
+** Vagrant installation
+
+** activating the Vagrant machine description
+  
   1. Vagrant installed
   2. check out the git repository
   3. startup vagrant

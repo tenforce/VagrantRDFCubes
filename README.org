@@ -2,10 +2,10 @@
 
 * Introduction 
 This repository provides all the necessary setup instructions to deploy a virtual machine setting up a conversion pipeline for statistical data. 
-This work has been conducted by the Open Data Support project. See [[https://joinup.ec.europa.eu/community/ods/description][Open Data Support]]. 
+This work has been conducted as part of the [[https://joinup.ec.europa.eu/community/ods/description][Open Data Support]] project.
 
 
-This Vagrant description is for a virtualbox which runs ubuntu precise64.
+This Vagrant machine description deploys a Ubuntu precise64.
 It provides the 
 - LodStatworkbench (accessible at http://localhost:8080/lod2statworkbench): see for more documentation http://wiki.lod2.eu/display/LOD2DOC/LOD2+Statistical+Workbench and the http://stack.linkeddata.org
 - conversion tool-chain which converts the statistical data provided by the Cypriotic Statistical Office and the Bulgarian Statistical Office.
@@ -13,36 +13,34 @@ It provides the
 * Deployment steps
 The deployment is also documented in the slides provided in the documentation.
 
-** Vagrant installation
+** Prerequisites
+
+- Vagrant [[https://www.vagrantup.com/]]
+- VirtualBox [[https://www.virtualbox.org/]]
+- git (for windows e.g. https://msysgit.github.io/)
 
 ** activating the Vagrant machine description
-  
-  1. Vagrant installed
+The high level process is as follows
+
+  1. the prerequistes are full filled on the host environment
   2. check out the git repository
-  3. startup vagrant
+  3. initialize the virtual machine using Vagrant
+  4. start the created virtual machine
   4. login to the system
        user:vagrant/vagrant
        
        note credentials Virtuoso are dba/root
 
-** Vagrant installation
-  See https://www.vagrantup.com/
-  Also install VirtualBox
-   
-*** Windows users
-  Make 
-*** Mac OS users
 
-** GitHub support
-  *** Windows users
-  Install git-bash ()
+
+** GitHub check out
   
 #+BEGIN_SRC bash
   git clone <URI>
 #+END_SRC
   
 
-** Startup Vagrant
+** Initialize the virtual machine using Vagrant
 #+BEGIN_SRC bash
     # 
 vagrant plugin install vagrant-vbguest
@@ -61,4 +59,5 @@ vagrant halt
 vagrant up
 #+END_SRC
 
+More tips and tricks can be found in the slides.
 

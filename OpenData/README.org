@@ -2,10 +2,11 @@
 
 * Summary
 
-This directory contains a set of selected CSV datafiles (for bulgaria
-and cyprus in the subdirectories) and utilities to convert those files
-into RDF Data/DCAT-AP formats and then to load these created data cube
-descriptions into a running virtuoso server.
+This directory contains a set of selected CSV datafiles (for
+*bulgaria* and *cyprus* in their respective subdirectories) and
+utilities to convert those files into RDF Data/DCAT-AP formats and
+then to load these created data cube descriptions into a running
+virtuoso server.
 
 * Converting CSV Datafiles to RDF Descriptions
 

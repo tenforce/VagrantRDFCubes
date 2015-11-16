@@ -7,7 +7,7 @@ and cyprus) and utilities to convert those files into RDF Data/DCAT-AP
 formats and then to load these converted datafiles into a running
 virtuoso server.
 
-* Converting CSV Datafiles to RDF Datacube/DCAT-AP descriptions
+* Converting CSV Datafiles to RDF Descriptions
 
 The prolog program (rdf_cubes.pl) converts the CSV into two files:
 

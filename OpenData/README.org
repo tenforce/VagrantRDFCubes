@@ -1,0 +1,31 @@
+#+TITLE: CSV-to-RDF Data File Conversion
+
+* Summary
+
+This directory contains a set of selected CSV datafiles (for bulgaria
+and cyprus) and utilities to convert those files into RDF Data/DCAT-AP
+formats and then to load these converted datafiles into a running
+virtuoso server.
+
+* Converting CSV Datafiles to RDF Datacube/DCAT-AP descriptions
+
+The prolog program (rdf_cubes.pl) converts the CSV into two files:
+
+- An RDF Data Cube description
+- A DCAT-AP description of the data.
+
+For each of the CSV data files, a description is provided in the
+rdf_cubes.pl file which details the required conversion of the data to
+the data cube representation (and the dcat-ap format). The description
+has a fixed format for the most part, with the current conversions
+being easily extendable.
+
+* Loading the converted descriptions into Virtuoso
+
+The script *load_rdfcubes.sh* will load these created files into a
+running virtuoso server.
+
+* Running the Convertors/Loaders
+
+The *makefile* is used to run the commands in the correct order
+(virtuoso much be running)

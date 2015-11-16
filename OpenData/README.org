@@ -28,4 +28,4 @@ running virtuoso server.
 * Running the Convertors/Loaders
 
 The *makefile* is used to run the commands in the correct order
-(virtuoso much be running)
+(the virtuoso service must be running). 

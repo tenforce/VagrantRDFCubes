@@ -3,29 +3,31 @@
 * Summary
 
 This directory contains a set of selected CSV datafiles (for bulgaria
-and cyprus) and utilities to convert those files into RDF Data/DCAT-AP
-formats and then to load these converted datafiles into a running
-virtuoso server.
+and cyprus in the subdirectories) and utilities to convert those files
+into RDF Data/DCAT-AP formats and then to load these created data cube
+descriptions into a running virtuoso server.
 
 * Converting CSV Datafiles to RDF Descriptions
 
 The prolog program (rdf_cubes.pl) converts the CSV into two files:
 
-- An RDF Data Cube description
-- A DCAT-AP description of the data.
+- An RDF Data Cube description (which will be located next to the CSV file),
+- A DCat-AP description of the data (created in this directory).
 
 For each of the CSV data files, a description is provided in the
 rdf_cubes.pl file which details the required conversion of the data to
-the data cube representation (and the dcat-ap format). The description
+the data cube representation (and the DCat-AP format). The description
 has a fixed format for the most part, with the current conversions
 being easily extendable.
 
-* Loading the converted descriptions into Virtuoso
+* Loading the converted Data Cube descriptions into Virtuoso
 
-The script *load_rdfcubes.sh* will load these created files into a
-running virtuoso server.
+The script *load_rdfcubes.sh* will load the created Data Cube files
+into a running virtuoso server (and register the graph so that it is
+visible in the cubeviz interface). The DCat-AP files will also be
+loaded,
 
 * Running the Convertors/Loaders
 
-The *makefile* is used to run the commands in the correct order
-(the virtuoso service must be running). 
+The *makefile* is used to run the commands in the correct order (the
+virtuoso service must be running) during the building of the VM.
